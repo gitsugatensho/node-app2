@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <style type="text/css">
+      body {
+        background: black;
+        color: white;
+      }
+      div.container {
+        max-width: 500px;
+        margin: 100px auto;
+        border: 20px solid white;
+        padding: 10px;
+        text-align: center;
+      }
+      h4 {
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h3>a random gif from www.gasta.org</h4>
+      <img src="{{url}}" />
+      <h4>Comments</h1>
+      <div style="width: 50%; margin: auto">
+      {% for comment in comments %}
+      <div style="padding: 10px; background-color: #EEE; margin: 20px">
+        <p style="font-size: 24px">{{ comment }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    </div>
+  </body>
+</html>
+
