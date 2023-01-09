@@ -25,5 +25,5 @@ def index():
         comments.append([user, comment, amount])
     return render_template('index.html', url=imageurl, comments=comments)
 
-if __name__ == "__main__":
+if __name__ == "__main__": 
     app.run(host="0.0.0.0")
