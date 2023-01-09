@@ -9,26 +9,34 @@
         max-width: 500px;
         margin: 100px auto;
         border: 20px solid white;
-        padding: 10px;
+        padding: 5px;
         text-align: center;
       }
-      h4 {
+      div.comments {
+        background-color: rgb(28, 26, 26);
+        margin: 10px 20px;
+        padding: 1px 20px;
+      }
+      h3 {
+        text-align: left;
         text-transform: uppercase;
+      }
+      p {
+        text-align: left;
+
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <h3>a random gif from www.gasta.org</h4>
-      <img src="{{url}}" />
-      <h4>Comments</h1>
-      <div style="width: 50%; margin: auto">
+      <h2>a random gif from www.gasta.org &#129409;</h4>
+      <img style="width: 100%; margin: auto" src="{{url}}" />
+      <h3>Comments</h1>
       {% for comment in comments %}
-      <div style="padding: 10px; background-color: #EEE; margin: 20px">
-        <p style="font-size: 24px">{{ comment }}</p>
+      <div class="comments">
+        <p style="font-size: 16px"><b>{{ comment[0] }}</b>: {{ comment[1] }} {{ '😂' * comment[2] }}</p>
       </div>
       {% endfor %}
-    </div>
     </div>
   </body>
 </html>
